@@ -36,6 +36,7 @@ RUN set -ex; \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
+    && sudo apt install qbittorrent
 
 ENV HOME=/root \
     DEBIAN_FRONTEND=noninteractive \
