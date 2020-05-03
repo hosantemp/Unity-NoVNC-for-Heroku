@@ -36,7 +36,6 @@ RUN set -ex; \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
-    && sudo apt install qbittorrent
 
 ENV HOME=/root \
     DEBIAN_FRONTEND=noninteractive \
@@ -60,6 +59,8 @@ RUN wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && 
 RUN sudo add-apt-repository ppa:obsproject/obs-studio \
      && sudo apt-get update && sudo apt-get install -y obs-studio
 
+RUN sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable \
+     && sudo apt-get update && sudo apt-get install qbittorrent
 COPY . /app
 
 RUN chmod +x /app/conf.d/websockify.sh
