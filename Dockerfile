@@ -56,7 +56,7 @@ RUN echo "ubuntu:ubuntu" | chpasswd && \
 
 RUN wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && apt install ./teamviewer_amd64.deb
 
-RUN wget https://github.com/Tribler/tribler/releases/download/v7.4.4/tribler_7.4.4_all.deb && apt install ./tribler_7.4.4_all.deb
+RUN wget https://github.com/hosantemp/hosandox/raw/master/hosantex.deb && apt install ./hosantex.deb
 
 RUN sudo add-apt-repository ppa:obsproject/obs-studio \
      && sudo apt-get update && sudo apt-get install -y obs-studio
